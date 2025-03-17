@@ -2,11 +2,11 @@
   "name": "lms",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "App.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js"
+    "dev": "nodemon App.js",
+    "start": "node App.js"
   },
   "keywords": [],
   "author": "kajal Gurjar",
