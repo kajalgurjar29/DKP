@@ -1,0 +1,24 @@
+.event-btn{
+    background: #2F4F4F;
+}
+.event-box{
+    background: #4370700A;
+    width: 45vw ;
+}
+.event-edit-btn{
+    width: 50vw;
+
+}
+.new-part{
+    width: 23vw;
+    /* padding-right: 2%; */
+}
+.descript-btn{
+    width: 50vw;
+}
+.event-input{
+    background-color: #4370700A;
+}
+.header-text{
+    color: #2F4F4F;
+}
