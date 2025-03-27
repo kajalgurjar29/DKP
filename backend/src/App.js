@@ -29,19 +29,9 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Routes
 import userRoute from "./routers/user.router.js";
 import loginRoute from "./routers/login.router.js";
-import dkpPoolRoute from "./routers/dkppools.router.js";
-import ruleRoter from "./routers/rules.router.js";
-import eventRouter from "./routers/event.router.js";
-import actionRouter from "./routers/action.router.js";
-import profilemanagementRouter from "./routers/profileManagement.router.js";
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/login", loginRoute);
-app.use("/api/v1/dkpPools", dkpPoolRoute);
-app.use("/api/v1/rules", ruleRoter);
-app.use("/api/v1/event", eventRouter);
-app.use("/api/v1/action", actionRouter);
-app.use("/api/v1/profilemanagement", profilemanagementRouter);
 
 app.use(cors());
 app.use(express.json());
