@@ -1,0 +1,14 @@
+.auction-btn {
+  background: #2f4f4f;
+}
+.auctions-had {
+  background: #43707042;
+}
+.text-input {
+  background: #4370700a;
+}
+@media (max-width: 768px) {
+  .Auction-edit {
+    margin-right: 20px;
+  }
+}

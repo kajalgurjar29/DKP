@@ -32,7 +32,7 @@ export const getProfile = async (req, res) => {
 // Update User Profile
 export const updateProfile = async (req, res) => {
   try {
-    const { username, email, password, role } = req.body;
+    const { username, email, password, role, phone} = req.body;
 
     // Find user by ID
     const user = await User.findById(req.params.id);
@@ -46,12 +46,13 @@ export const updateProfile = async (req, res) => {
     if (username) user.username = username;
     if (email) user.email = email;
     if (role) user.role = role;
-
-    // Hash password if provided
-    if (password) {
-      const salt = await bcrypt.genSalt(10);
-      user.password = await bcrypt.hash(password, salt);
-    }
+    if (phone) user.phone = phone;
+    
+      if (password) {
+        // Hash password if provided
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(password, salt);
+      }
 
     await user.save();
 
