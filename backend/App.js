@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import { connectDB } from "./db/db.config.js";
+import { connectDB } from "./src/db/db.config.js";
 import { createServer } from "http";
 import multer from "multer";
 dotenv.config({ path: "./.env" });
@@ -27,8 +27,8 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Routes
-import userRoute from "./routers/user.router.js";
-import loginRoute from "./routers/login.router.js";
+import userRoute from "./src/routers/user.router.js";
+import loginRoute from "./src/routers/login.router.js";
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/login", loginRoute);
