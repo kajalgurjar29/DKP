@@ -61,7 +61,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import { connectDB } from "./db/db.config.js";
+import { connectDB } from "./src/db/db.config.js";
 import { createServer } from "http";
 
 dotenv.config({ path: "./.env" });
@@ -76,8 +76,8 @@ const server = createServer(app);
 
 app.use(
   cors({
-    origin: "*", 
-    credentials: true, 
+    origin: "*",
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
@@ -90,13 +90,13 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 console.log("Middleware initialized.");
 
 // Importing Routes
-import userRoute from "./routers/user.router.js";
-import loginRoute from "./routers/login.router.js";
-import dkpPoolRoute from "./routers/dkppools.router.js";
-import ruleRouter from "./routers/rules.router.js";
-import eventRouter from "./routers/event.router.js";
-import actionRouter from "./routers/action.router.js";
-import profileManagementRouter from "./routers/profileManagement.router.js";
+import userRoute from "./src/routers/user.router.js";
+import loginRoute from "./src/routers/login.router.js";
+import dkpPoolRoute from "./src/routers/dkppools.router.js";
+import ruleRouter from "./src/routers/rules.router.js";
+import eventRouter from "./src/routers/event.router.js";
+import actionRouter from "./src/routers/action.router.js";
+import profileManagementRouter from "./src/routers/profileManagement.router.js";
 
 // API Routes
 app.use("/api/v1/user", userRoute);
