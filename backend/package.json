@@ -5,8 +5,8 @@
   "main": "App.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon App.js",
-    "start": "node App.js"
+    "dev": "node api.js && nodemon App.js",
+    "start": "node api.js && node App.js"
   },
   "keywords": [],
   "author": "kajal Gurjar",
